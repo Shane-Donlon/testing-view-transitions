@@ -19,7 +19,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  const { theme, setTheme } = useTheme()
+  const {  setTheme } = useTheme()
   useOnDocument('qviewTransition', $(async (event: CustomEvent<ViewTransition>) => {
 
     const transition = event.detail;
