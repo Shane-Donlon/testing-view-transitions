@@ -19,7 +19,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  const {  setTheme } = useTheme()
+  const { setTheme } = useTheme()
   useOnDocument('qviewTransition', $(async (event: CustomEvent<ViewTransition>) => {
 
     const transition = event.detail;
@@ -41,7 +41,7 @@ export default component$(() => {
       <NavLink href="/">Home</NavLink>
       <button type="button" onClick$={() => setTheme('light')}>Light Mode</button>
       <button type="button" onClick$={() => {
-        document.startViewTransition(() => { setTheme('dark') })
+        setTheme('dark')
       }}>Dark Mode</button>
       <NavLink href="/about/">About</NavLink>
       <NavLink href="/test/">Test</NavLink>
