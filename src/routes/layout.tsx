@@ -26,11 +26,11 @@ export default component$(() => {
     await transition.ready;
 
 
-    document.documentElement.animate([{ opacity: 0, }], { duration: 750, easing: 'ease-in-out' })
+    document.documentElement.animate([{ opacity: 0, }], { duration: 3000, easing: 'ease-in-out' })
     await transition.finished;
     const p = document.querySelector('p')
     if (p) {
-      p.innerText = "Transitioned"
+      p.innerText = "await transition.finished completed"
     }
   }))
 
