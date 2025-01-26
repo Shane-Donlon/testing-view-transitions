@@ -3,7 +3,6 @@ import type { RequestHandler } from "@builder.io/qwik-city";
 
 import { Header } from "~/components/header";
 import { NavLink } from "~/components/navlink";
-
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.dev/docs/caching/
@@ -18,13 +17,16 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
   return <><Header>
     <NavLink href="/">Home</NavLink>
-    <button type="button" onClick$={() => setTheme('light')}>Light Mode</button>
+    <button type="button" onClick$={() =>
+      // setTheme('light')
+      console.log("light")}>Light Mode</button>
     <button type="button" onClick$={() => {
-      setTheme('dark')
+      // setTheme('dark')
+      console.log("dark")
     }}>Dark Mode</button>
     <NavLink href="/about/">About</NavLink>
     <NavLink href="/test/">Test</NavLink>
-  </Header>
+  </Header >
     <Slot /></>
 });
 
