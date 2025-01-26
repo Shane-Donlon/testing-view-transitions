@@ -8,7 +8,8 @@ export default component$(() => {
       <div>
         Home page
         <br />
-        Happy coding.
+        <p>item1</p>
+        <p>item2</p>
       </div>
     </>
   );
