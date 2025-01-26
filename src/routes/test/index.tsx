@@ -12,10 +12,11 @@ export default component$(() => {
         //     .filter((item) => item.checkVisibility())
         //     .map((item) => item.style.viewTransitionName);
         const names = Array.from(items)
-            .filter((item) => item.checkVisibility())
+            .filter((item) => (item as HTMLElement).checkVisibility())
             .map((item) => {
-                console.log(item.style.viewTransitionName, 'item.style.viewTransitionName')
-                return item.style.viewTransitionName
+                const htmlItem = item as HTMLElement;
+                console.log(htmlItem.style.viewTransitionName, 'htmlItem.style.viewTransitionName');
+                return htmlItem.style.viewTransitionName;
             });
         console.log(names, 'names')
         // Wait for ::view-transition pseudo-class to exist
